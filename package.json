@@ -1,0 +1,12 @@
+{
+  "name": "tail-f-Simulation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/doleakash/tail-f-Simulation.git",
+  "author": "Akash Dole",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security"
+  }
+}
