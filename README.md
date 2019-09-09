@@ -1,6 +1,6 @@
 #Welcome to tail-f-Simulation
 Instruction to run project :-
-1)install npm install / yarn install    to install all dependencies for a project.
+1)npm install / yarn install    to install all dependencies for a project.
 2)run with nodemon / node index.js  
 
 
