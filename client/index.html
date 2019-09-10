@@ -1,20 +1,49 @@
 <html>
-
 <head>
   <meta charset="utf-8">
   <title>Welcome to tail -f simulation</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"></script>
 </head>
 
+<style>
+  .b {
+    font-family: 'Nunito';
+    width: 800px;
+    margin-bottom: 10px;
+    border:solid #ddd;
+    border-radius: 2px;
+    height: 400px;
+    background: #f9f9f9;
+    padding: 14px 0px;
+    margin: 0 20px;
+    font-size: 16px;
+    color: #575ed8;
+    box-sizing: border-box;
+    display: block;
+    padding: 10px 20px;
+  }
+</style>
+
+
 <body>
   <h1>Welcome to tail -f simulation</h1>
-
+ <pre class="b" id="output">
+  </pre>
 </body>
 
 </html>
 <script>
   var socket = io.connect("http://localhost:8080");
   socket.on('read', function (read) {
-    console.log("read", read)
+    if (read.length > 0) {
+      document.getElementById('output').innerHTML = "";
+      output.innerHTML += read
+      output = document.getElementById('output');
+    } else {
+      var message = "No Logs ";
+      document.getElementById('output').innerHTML = "";
+      output = document.getElementById('output');
+      output.innerHTML += message
+    }
   })
 </script>
